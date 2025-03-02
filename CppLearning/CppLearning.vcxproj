@@ -127,7 +127,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CppLearning.cpp" />
+    <ClCompile Include="initialLearning.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="string.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="string.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
