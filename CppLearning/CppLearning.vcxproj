@@ -132,6 +132,7 @@
     <ClCompile Include="string_utils.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="initialLearning_utils.h" />
     <ClInclude Include="string_utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

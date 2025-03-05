@@ -62,13 +62,11 @@ void printMessage()
 	//	std::cout << "String not found!";
 	//}
 
-	
 	/*Auto-type Deduction*/
 	//std::string s = "A vida presta!";
 	//auto my_auto1 = s.substr(2, 4);
 
 	//std::cout << my_auto1 << '\n';
-
 
 	}
 

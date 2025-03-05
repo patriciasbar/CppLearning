@@ -29,5 +29,8 @@
     <ClInclude Include="string_utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="initialLearning_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
