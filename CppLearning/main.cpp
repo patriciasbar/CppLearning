@@ -1,11 +1,14 @@
 #include "string_utils.h"
 #include "initialLearning_utils.h"
+#include "loginchecker_utils.h"
 
 
 int main()
 {
-    printMessage();
-    initialLearning();
+    //printMessage();
+    //initialLearning();
+    loginChecker();
+
 
     return 0;
 }

@@ -24,12 +24,18 @@
     <ClCompile Include="initialLearning.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="loginChecker.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="string_utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="initialLearning_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="loginChecker_utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
