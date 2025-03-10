@@ -170,5 +170,77 @@ void initialLearning()
 		std::cout << "String " << strtofind << " found at the position " << found << "!" << '\n';
 	}*/
 
-	
+	/* Chapter 18 - Exercises */
+	// a simple if-statement
+	//bool a = false;
+	//if (a) {
+	//	std::cout << "Variable `a` is True!" << '\n';
+	//}
+	//else
+	//{
+	//	std::cout << "Variable `a` is False!" << '\n';
+	//}
+		
+	// logical operators
+	//int my_value = 95;
+	//if (my_value > 100 && my_value < 300)
+	//{
+	//	std::cout << "The value is greater than 100 and less than 300." << '\n';
+	//}
+	//else
+	//{
+	//	std::cout << "The value is neither greater than 100 nor less than 300!" << '\n';
+	//}
+	//bool mycondition = true;
+	//if (my_value > 100 || mycondition) 
+	//{
+	//	std::cout << "The value is either greater than 100 or mycondition is true" << '\n';
+	//}
+	//else
+	//{
+	//	std::cout << "The value is not greater than 100 and the bool variable is false" << '\n';
+	//}
+	//bool mynegcondition = !mycondition;
+		
+	// the switch-statement
+	//int my_val = 3;
+	//switch (my_val)
+	//{case 1:
+	//	std::cout << "Value is in range [1 to 4], val: " << my_val << '\n';
+	//	break;
+	//case 2:
+	//	std::cout << "Value is in range [1 to 4], val: " << my_val << '\n';
+	//	break;
+	//case 3:
+	//	std::cout << "Value is in range [1 to 4], val: " << my_val << '\n';
+	//	break;
+	//case 4:
+	//	std::cout << "Value is in range [1 to 4], val: " << my_val << '\n';
+	//	break;	
+	//default:
+	//	std::cout << "Value is NOT in range [1..4]." << '\n';
+	//	break;
+	//}
+		
+	// the for-loop
+	//int counter = 0;
+	//	for (counter; counter < 15; counter++)
+	//{
+	//	std::cout << "Counting..." << counter << '\n';
+	//}
+
+	// array and the for-loop
+	//int my_array[5] = { 10, 40, 60, 120, 144 };
+	//for (int i = 0; i < 5; i++)
+	//{
+	//	std::cout << "Item value is " << my_array[i] << " at index: " << i << '\n';
+	//}
+
+	// the const type qualifier
+	//const int int_var1 = 5;
+	//const double double_var2 = 5.1;
+	//const std::string str_var3 = "Yeah!";
+	//const int int_var2 = int_var1;
+	//std::cout << "Variables values are respectively: " 
+	//	<< int_var1 << ", " << double_var2 << ", " << str_var3 << " and " << int_var2 << '\n';
 }
