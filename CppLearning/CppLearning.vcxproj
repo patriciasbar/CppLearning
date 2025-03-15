@@ -132,12 +132,14 @@
     <ClCompile Include="loginChecker.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="string_utils.cpp" />
+    <ClCompile Include="student_utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="calc_utils.h" />
     <ClInclude Include="initialLearning_utils.h" />
     <ClInclude Include="loginChecker_utils.h" />
     <ClInclude Include="string_utils.h" />
+    <ClInclude Include="student_utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

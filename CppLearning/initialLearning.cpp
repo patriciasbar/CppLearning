@@ -243,4 +243,24 @@ void initialLearning()
 	//const int int_var2 = int_var1;
 	//std::cout << "Variables values are respectively: " 
 	//	<< int_var1 << ", " << double_var2 << ", " << str_var3 << " and " << int_var2 << '\n';
+
+	/* Chapter 22 - Exercises */
+	// Dynamic Storage Duration  (****New/Delete for learning purposes only**** 
+	// its use is discouraged - smart pointers (will be taught later in this course)
+	
+	//int* counter = new int{ 85 };   //allocate heap memory
+	//std::cout << "Value: " << *counter;
+	//delete counter;  //deallocate it
+
+	// Automatic and Dynamic Storage Durations
+	//int x = 123;
+	//std::cout << "Value of x is: " << x << '\n';
+	//int* y = new int{ x };
+	//std::cout << "Pointer address is: " << &y << '\n';
+	//std::cout << "Pointer to the allocated memory address is: " << y << '\n';
+	//std::cout << "Value pointer points to is: " << *y << '\n';
+	//delete y;
+
+
+ 
 }

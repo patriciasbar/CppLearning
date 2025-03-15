@@ -362,3 +362,5 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
+/CppLearning/student_utils.cpp
+/CppLearning/student_utils.h

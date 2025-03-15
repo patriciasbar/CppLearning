@@ -2,21 +2,18 @@
 #include "loginchecker_utils.h"
 #include "calc_utils.h"
 #include "string_utils.h"
-
 #include "initialLearning_utils.h"
-
-
 
 int main()
 {
     int option;
     std::cout << "Menu: \n "
-        << " 0 - initialLearning; \n "
-        << " 1 - printMessage; \n "
-        << " 2 - customMessage; \n "
-        << " 3 - multiplication; \n "
-        << " 4 - loginChecker; \n "
-        << " 5 - division. \n ";
+        << " 0 - initialLearning \n "
+        << " 1 - printMessage \n "
+        << " 2 - customMessage \n "
+        << " 3 - multiplication \n "
+        << " 4 - loginChecker \n "
+        << " 5 - division \n ";
     std::cout << "Enter an option... ";
     std::cin >> option;
     switch (option)
