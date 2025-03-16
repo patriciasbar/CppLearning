@@ -18,7 +18,7 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="string_utils.cpp">
+    <ClCompile Include="string_exercises.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="initialLearning.cpp">
@@ -30,15 +30,15 @@
     <ClCompile Include="calc_utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="student_utils.cpp">
+    <ClCompile Include="classes_exercises.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="string_utils.h">
+    <ClInclude Include="string_exercises.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="initialLearning_utils.h">
+    <ClInclude Include="initialLearning.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="loginChecker_utils.h">
@@ -47,7 +47,7 @@
     <ClInclude Include="calc_utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="student_utils.h">
+    <ClInclude Include="classes_exercises.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

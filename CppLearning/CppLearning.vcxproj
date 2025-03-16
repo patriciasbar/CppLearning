@@ -128,18 +128,18 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="calc_utils.cpp" />
+    <ClCompile Include="classes_exercises.cpp" />
     <ClCompile Include="initialLearning.cpp" />
     <ClCompile Include="loginChecker.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="string_utils.cpp" />
-    <ClCompile Include="student_utils.cpp" />
+    <ClCompile Include="string_exercises.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="calc_utils.h" />
-    <ClInclude Include="initialLearning_utils.h" />
+    <ClInclude Include="classes_exercises.h" />
+    <ClInclude Include="initialLearning.h" />
     <ClInclude Include="loginChecker_utils.h" />
-    <ClInclude Include="string_utils.h" />
-    <ClInclude Include="student_utils.h" />
+    <ClInclude Include="string_exercises.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

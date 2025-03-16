@@ -1,8 +1,9 @@
 #include <iostream>
 #include "loginchecker_utils.h"
 #include "calc_utils.h"
-#include "string_utils.h"
-#include "initialLearning_utils.h"
+#include "string_exercises.h"
+#include "initialLearning.h"
+#include "classes_exercises.h"
 
 int main()
 {
@@ -13,7 +14,8 @@ int main()
         << " 2 - customMessage \n "
         << " 3 - multiplication \n "
         << " 4 - loginChecker \n "
-        << " 5 - division \n ";
+        << " 5 - division \n "
+        << " 6 - Classes exercises \n ";
     std::cout << "Enter an option... ";
     std::cin >> option;
     switch (option)
@@ -43,6 +45,18 @@ int main()
         std::cout << "Int division results: " << division(10, 5) << '\n';
         std::cout << "Double division results: " << division(12.5, 2.0) << '\n';
         break;
+    case 6:
+    {
+        Book my_book("The Four Agreements", 160);
+        my_book.displayInfo();
+        Book my_book_copy = my_book;
+        my_book_copy.displayInfo();
+        Book my_book_assign("12 Rules for Life", 488);
+        my_book = my_book_assign;
+        my_book.displayInfo();
+        break;
+    }
+
     default:
         std::cout << "No valid option selected.";
         break;
