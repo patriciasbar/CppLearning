@@ -54,6 +54,14 @@ int main()
         Book my_book_assign("12 Rules for Life", 488);
         my_book = my_book_assign;
         my_book.displayInfo();
+        Book my_book_tomove("Pride & Predudice", 320);
+        Book my_book_move = std::move(my_book_tomove);
+        my_book_move.displayInfo();
+        my_book_tomove.displayInfo();
+        Book my_book_assigned("A New Science of Heaven", 466);
+        my_book = my_book_assigned;
+        my_book.displayInfo();
+
         break;
     }
 

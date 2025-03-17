@@ -14,6 +14,10 @@ public:
 	Book(const Book& other); // copy constructor
 
 	Book& operator=(const Book& other); // copy assignment
+
+	Book(Book&& other); // move operator
+
+	Book& operator=(Book&& other); // move assignment
 };
 
 #endif;
