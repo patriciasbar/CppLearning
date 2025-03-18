@@ -4,7 +4,7 @@
 class Book
 {
 private:
-	std::string title;
+	std::string* title;
 	int pages;
 public:
 	Book(std::string book, int total_pages);  //default constructor
@@ -18,6 +18,8 @@ public:
 	Book(Book&& other); // move operator
 
 	Book& operator=(Book&& other); // move assignment
+
+	~Book();  //destructor
 };
 
 #endif;
