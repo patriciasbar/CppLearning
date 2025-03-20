@@ -55,7 +55,7 @@ void Book::displayInfo()
 	}
 	else
 	{
-		std::cout << "Bookk is empty, # of pages " << pages << '\n';
+		std::cout << "Book is empty, # of pages " << pages << '\n';
 	}
 }
 
@@ -63,6 +63,44 @@ Book::~Book()
 {
 	std::cout << "Book destroyed!" << '\n';
 	delete title;
-} 
+}
+
+
+MyClass::MyClass(std::string username) : login{ new std::string (username) }
+{
+	std::cout << "MyClass object has been created! :)" << '\n';
+};
+
+void MyClass::printmessage()
+{
+	std::cout << "Hello, " << *login << "!" << " Don't forget to smile!" << '\n';
+}
+
+
+void MyClass::setx(int myvalue) 
+{
+	x = myvalue;
+};
+
+
+int MyClass::getx()
+{
+	return x;
+};
+
+MyClass::~MyClass()
+{
+	if (login)
+	{
+		delete login;
+		std::cout << "Destructor called!" << '\n';
+	}
+	else
+	{
+		std::cout << "Empty login!" << '\n';
+	}
+};
+
+
 
 ;

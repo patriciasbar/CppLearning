@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "initialLearning.h"
 
 void initialLearning()
 {
@@ -261,6 +262,4 @@ void initialLearning()
 	//std::cout << "Value pointer points to is: " << *y << '\n';
 	//delete y;
 
-
- 
-}
+};

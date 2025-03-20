@@ -22,4 +22,21 @@ public:
 	~Book();  //destructor
 };
 
+class MyClass
+{
+private:
+	int x;
+	std::string* login;
+public:
+	MyClass(std::string username); // default constructor
+	
+	void printmessage();
+
+	void setx(int myvalue);
+
+	int getx();
+
+	~MyClass(); // destructor
+};
+
 #endif;

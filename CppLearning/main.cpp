@@ -21,8 +21,10 @@ int main()
     switch (option)
     {
     case 0:
+    {
         initialLearning();
         break;
+    }
     case 1:
         printMessage();
         break;
@@ -47,21 +49,10 @@ int main()
         break;
     case 6:
     {
-        Book my_book("The Four Agreements", 160);
-        my_book.displayInfo();
-        Book my_book_copy = my_book;
-        my_book_copy.displayInfo();
-        Book my_book_assign("12 Rules for Life", 488);
-        my_book = my_book_assign;
-        my_book.displayInfo();
-        Book my_book_tomove("Pride & Predudice", 320);
-        Book my_book_move = std::move(my_book_tomove);
-        my_book_move.displayInfo();
-        my_book_tomove.displayInfo();
-        Book my_book_assigned("A New Science of Heaven", 466);
-        my_book = my_book_assigned;
-        my_book.displayInfo();
-
+        MyClass o("pimpim");
+        o.printmessage();
+        o.setx(1111);
+        std::cout << "The value of x is " << o.getx() << '\n';
         break;
     }
 
