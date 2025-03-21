@@ -66,41 +66,25 @@ Book::~Book()
 }
 
 
-MyClass::MyClass(std::string username) : login{ new std::string (username) }
+MyClass::MyClass(int my_int, double my_double) : x{ my_int }, y{ my_double }
 {
 	std::cout << "MyClass object has been created! :)" << '\n';
 };
 
-void MyClass::printmessage()
+MyClass::MyClass(const MyClass& other) : x{ other.x }, y{ other.y }
 {
-	std::cout << "Hello, " << *login << "!" << " Don't forget to smile!" << '\n';
+	std::cout << "Copy constructor invoked!" << '\n';
+};
+
+
+MyClass::MyClass(MyClass&& other) : x{ std::move(other.x) }, y{ std::move(other.y) }
+{
+	std::cout << "Move constructor invoked!" << '\n';
+};
+
+void MyClass::printdata()
+{
+	std::cout << "Value of my_int is: " << x << " and value of my_double is : " << y << '\n';
 }
-
-
-void MyClass::setx(int myvalue) 
-{
-	x = myvalue;
-};
-
-
-int MyClass::getx()
-{
-	return x;
-};
-
-MyClass::~MyClass()
-{
-	if (login)
-	{
-		delete login;
-		std::cout << "Destructor called!" << '\n';
-	}
-	else
-	{
-		std::cout << "Empty login!" << '\n';
-	}
-};
-
-
 
 ;

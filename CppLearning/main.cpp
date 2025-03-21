@@ -49,10 +49,9 @@ int main()
         break;
     case 6:
     {
-        MyClass o("pimpim");
-        o.printmessage();
-        o.setx(1111);
-        std::cout << "The value of x is " << o.getx() << '\n';
+        MyClass o(2, 2.4);
+        MyClass o3 = std::move(o);
+        o3.printdata();
         break;
     }
 

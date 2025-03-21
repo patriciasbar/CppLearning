@@ -7,17 +7,17 @@ private:
 	std::string* title;
 	int pages;
 public:
-	Book(std::string book, int total_pages);  //default constructor
+	Book(std::string book, int total_pages);  //user provided constructor
 
 	void displayInfo();
 
-	Book(const Book& other); // copy constructor
+	Book(const Book& other); // user defined copy constructor
 
-	Book& operator=(const Book& other); // copy assignment
+	Book& operator=(const Book& other); // user defined copy assignment
 
-	Book(Book&& other); // move operator
+	Book(Book&& other); // user defined move operator
 
-	Book& operator=(Book&& other); // move assignment
+	Book& operator=(Book&& other); // user defined move assignment
 
 	~Book();  //destructor
 };
@@ -26,17 +26,16 @@ class MyClass
 {
 private:
 	int x;
-	std::string* login;
+	double y;
 public:
-	MyClass(std::string username); // default constructor
+	MyClass(int my_int, double my_double); //user provided constructor
 	
-	void printmessage();
+	MyClass(const MyClass& other); //user defined copy constructor
 
-	void setx(int myvalue);
+	MyClass(MyClass&& other); //user defined move constructor
 
-	int getx();
+	void printdata();
 
-	~MyClass(); // destructor
 };
 
 #endif;
