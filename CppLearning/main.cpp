@@ -49,8 +49,9 @@ int main()
         break;
     case 6:
     {
-        MyClass o(2, 2.4);
-        MyClass o3 = std::move(o);
+        MyClass o1(2, 2.4);
+        MyClass o2(4, 8.6);
+        MyClass o3 = o1 - o2;
         o3.printdata();
         break;
     }

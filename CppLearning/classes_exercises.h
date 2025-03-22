@@ -34,6 +34,10 @@ public:
 
 	MyClass(MyClass&& other); //user defined move constructor
 
+	MyClass operator-=(const MyClass& other); //operator- overload
+	
+	friend MyClass operator-(MyClass lhs, const MyClass& other);
+	
 	void printdata();
 
 };

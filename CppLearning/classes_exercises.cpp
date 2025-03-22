@@ -87,4 +87,17 @@ void MyClass::printdata()
 	std::cout << "Value of my_int is: " << x << " and value of my_double is : " << y << '\n';
 }
 
+MyClass MyClass::operator-=(const MyClass& other)  //Define the - operator function of class MyClass, which returns a MyClass
+{
+	this->x -= other.x;
+	this->y -= other.y;
+	return *this;
+}
+
+MyClass operator-(MyClass lhs, const MyClass& other)
+{
+	lhs -= other;
+	return lhs;
+}
+
 ;
