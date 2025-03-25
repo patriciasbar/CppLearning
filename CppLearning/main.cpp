@@ -4,6 +4,7 @@
 #include "string_exercises.h"
 #include "initialLearning.h"
 #include "classes_exercises.h"
+#include "Person.h"
 
 int main()
 {
@@ -15,7 +16,7 @@ int main()
         << " 3 - multiplication \n "
         << " 4 - loginChecker \n "
         << " 5 - division \n "
-        << " 6 - Classes exercises \n ";
+        << " 6 - Classes exercises \n ";        
     std::cout << "Enter an option... ";
     std::cin >> option;
     switch (option)
@@ -49,10 +50,8 @@ int main()
         break;
     case 6:
     {
-        MyClass o1(2, 2.4);
-        MyClass o2(4, 8.6);
-        MyClass o3 = o1 - o2;
-        o3.printdata();
+        Person p("Patuta");
+        std::cout << "Username:" << p.getname() << '\n';
         break;
     }
 

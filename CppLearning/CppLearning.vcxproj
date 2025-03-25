@@ -132,6 +132,7 @@
     <ClCompile Include="initialLearning.cpp" />
     <ClCompile Include="loginChecker.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Person.cpp" />
     <ClCompile Include="string_exercises.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="classes_exercises.h" />
     <ClInclude Include="initialLearning.h" />
     <ClInclude Include="loginChecker_utils.h" />
+    <ClInclude Include="Person.h" />
     <ClInclude Include="string_exercises.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
