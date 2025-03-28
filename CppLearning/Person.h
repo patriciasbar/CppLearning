@@ -8,16 +8,21 @@ private:
 	std::string name;
 
 public:
-	Person(std::string username); // user defined constructor
+	explicit Person(const std::string& username); // user defined constructor
 
-	std::string getname();
+	std::string getname() const;
 };
 
 
 class Student : public Person   //derived class
 {
+private:
+	int semester;
 
+public:
+	Student(const std::string& username, int sem); //user defined constructor
 
+	int getsemester() const;
 };  
 
 

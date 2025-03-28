@@ -50,8 +50,9 @@ int main()
         break;
     case 6:
     {
-        Person p("Patuta");
-        std::cout << "Username:" << p.getname() << '\n';
+        Student stu1("Pimpimpim", 6);
+        std::cout << stu1.getname() << '\n';
+        std::cout << stu1.getsemester() << '\n';
         break;
     }
 
