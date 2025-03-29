@@ -50,9 +50,14 @@ int main()
         break;
     case 6:
     {
-        Student stu1("Pimpimpim", 6);
-        std::cout << stu1.getname() << '\n';
-        std::cout << stu1.getsemester() << '\n';
+        Device* ptr;
+        Laptop l1;
+        ptr = &l1;
+        ptr->displayinfo();
+        Smartphone l2;
+        ptr = &l2;
+        ptr->displayinfo();
+        ptr->displayDeviceCount();
         break;
     }
 

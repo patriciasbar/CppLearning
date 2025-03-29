@@ -42,4 +42,32 @@ public:
 
 };
 
+
+class Device
+{
+public:
+	static int deviceCount;
+	static void displayDeviceCount();
+	static void incrementCount();
+	virtual void displayinfo();
+
+Device(); //user defined constructor.
+
+};
+
+class Laptop : public Device {
+public:
+	void displayinfo() override;
+
+
+};
+
+class Smartphone : public Device {
+public:
+	void displayinfo() override;
+
+
+};
+
 #endif;
+ 

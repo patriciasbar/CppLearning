@@ -100,4 +100,37 @@ MyClass operator-(MyClass lhs, const MyClass& other)
 	return lhs;
 }
 
+
+int Device::deviceCount;
+
+Device::Device()   //user defined constructor
+{
+	incrementCount();
+}
+
+void Device::incrementCount()
+{
+	++deviceCount;
+}
+
+void Device::displayinfo()
+{
+	std::cout << "Device info." << '\n';
+}
+
+void Laptop::displayinfo()
+{
+	std::cout << "Laptop info." << '\n';
+}
+
+void Smartphone::displayinfo()
+{
+	std::cout << "Smartphone info." << '\n';
+}
+
+void Device::displayDeviceCount()
+{
+	std::cout << "Number of devices created: " << deviceCount << '\n';
+}
+
 ;
