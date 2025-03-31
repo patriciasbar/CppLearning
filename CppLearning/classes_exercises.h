@@ -42,32 +42,36 @@ public:
 
 };
 
+template <typename T, typename U>
+auto compareValues(T val1, U val2) {
+	return (val1 > val2) ? val1 : val2;
+}
 
 class Device
 {
 public:
 	static int deviceCount;
+	double storageGB;
 	static void displayDeviceCount();
 	static void incrementCount();
 	virtual void displayinfo();
-
-Device(); //user defined constructor.
+	Device(double val_storage); //user defined constructor.
 
 };
 
 class Laptop : public Device {
 public:
 	void displayinfo() override;
-
-
+	Laptop(double val_storage);
 };
 
 class Smartphone : public Device {
 public:
 	void displayinfo() override;
-
+	Smartphone(double val_storage);
 
 };
+
 
 #endif;
  

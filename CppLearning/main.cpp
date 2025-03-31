@@ -50,14 +50,11 @@ int main()
         break;
     case 6:
     {
-        Device* ptr;
-        Laptop l1;
-        ptr = &l1;
-        ptr->displayinfo();
-        Smartphone l2;
-        ptr = &l2;
-        ptr->displayinfo();
-        ptr->displayDeviceCount();
+        Laptop obj1(42.1);
+        Smartphone obj2(42.2);    
+        double result = compareValues(obj1.storageGB, obj2.storageGB);
+        std::cout << "Values " << obj1.storageGB << '\n' << obj2.storageGB << '\n';
+        std::cout << "The greater one is " << result << '\n';
         break;
     }
 

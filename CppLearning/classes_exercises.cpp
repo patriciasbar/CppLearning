@@ -103,10 +103,14 @@ MyClass operator-(MyClass lhs, const MyClass& other)
 
 int Device::deviceCount;
 
-Device::Device()   //user defined constructor
+Device::Device(double val_storage): storageGB{ val_storage }   //user defined constructor
 {
 	incrementCount();
 }
+
+Laptop::Laptop(double val_storage): Device(val_storage) {};
+
+Smartphone::Smartphone(double val_storage) : Device(val_storage) {};
 
 void Device::incrementCount()
 {
