@@ -137,4 +137,80 @@ void Device::displayDeviceCount()
 	std::cout << "Number of devices created: " << deviceCount << '\n';
 }
 
+int myFunction() {
+	static int count;
+	return ++count;
+}
+
+void MyStatic::MyStaticFunc() {
+	std::cout << "Hello from my static func!" << '\n';
+};
+
+void MyStatic::MyFunc() {
+	std::cout << "Hello from my regular func!" << '\n';
+}
+
+
+std::string checkDayOfWeek(daysOfWeek val1)
+{
+	std::string day;
+
+	if (val1 == daysOfWeek::Monday)
+	{
+		val1 = daysOfWeek::Saturday;
+		day = "Saturday";
+	}
+	else if (val1 == daysOfWeek::Tuesday)
+	{
+		day = "Tuesday";
+	}
+	else if (val1 == daysOfWeek::Wednesday)
+	{
+		day = "Wednesday";
+	}
+	else if (val1 == daysOfWeek::Thursday)
+	{
+		day = "Thursday";
+	}
+	else if (val1 == daysOfWeek::Friday)
+	{
+		day = "Friday";
+	}
+	else if (val1 == daysOfWeek::Saturday)
+	{
+		day = "Saturday";
+	}
+	else if (val1 == daysOfWeek::Sunday)
+	{
+		day = "Sunday";
+	}
+	return day;
+
+};
+
+std::string displayFruits(fruits fruit) {
+	switch (static_cast<int>(fruit)) {
+	case 0:
+		return "Apple";
+		break;
+	case 1:
+		return "Orange";
+		break;
+	case 2:
+		return "Banana";
+		break;
+	case 3:
+		return "Blueberry";
+		break;
+	case 4:
+		return "Grape";
+		break;
+	default:
+		return "No fruit sorry!";
+		break;
+			
+	}
+};
+
+
 ;

@@ -50,11 +50,28 @@ int main()
         break;
     case 6:
     {
-        Laptop obj1(42.1);
-        Smartphone obj2(42.2);    
-        double result = compareValues(obj1.storageGB, obj2.storageGB);
-        std::cout << "Values " << obj1.storageGB << '\n' << obj2.storageGB << '\n';
-        std::cout << "The greater one is " << result << '\n';
+        int counter;
+        for (int i = 0; i < 10; ++i) {
+            counter = myFunction();
+        }
+        std::cout << "Function was called: " << counter << '\n';
+
+        TypeClass<int> mytype(24);
+        std::cout << "My val is: " << mytype.getVal() << '\n';
+        mytype.setVal(12);
+        std::cout << "My val is: " << mytype.getVal() << '\n';
+
+        TypeClass<std::string> mytype2("Peter");
+        std::cout << "My val is: " << mytype2.getVal() << '\n';
+        mytype2.setVal("Moses");
+        std::cout << "My val is: " << mytype2.getVal() << '\n';
+
+        std::cout << "Day of the week: " << checkDayOfWeek(daysOfWeek::Friday) << '\n';
+
+        std::cout << "Fruit of the day! " << displayFruits(fruits::Orange) << '\n';
+
+
+
         break;
     }
 

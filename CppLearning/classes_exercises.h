@@ -72,6 +72,59 @@ public:
 
 };
 
+int myFunction();
+
+class MyStatic {
+public:
+	static void MyStaticFunc();
+	void MyFunc();
+	
+};
+
+template <typename T>
+T sumNumbers(T num1, T num2) {
+	return num1 + num2;
+};
+
+
+template <typename T>
+class TypeClass {
+private:
+	T val1;
+public:
+	TypeClass(T value1) : val1{ value1 } {}; //user defined constructor
+
+	T getVal() const {
+		return val1;
+	}
+
+	void setVal(T value1) {
+		val1 = value1;
+	}
+
+};
+
+enum class daysOfWeek {
+	Monday,
+	Tuesday,
+	Wednesday,
+	Thursday,
+	Friday,
+	Saturday,
+	Sunday
+};
+
+std::string checkDayOfWeek(daysOfWeek val1);
+
+enum class fruits {
+	Apple,
+	Orange,
+	Banana,
+	Blueberry,
+	Grape
+};
+
+std::string displayFruits(fruits fruit);
 
 #endif;
  
