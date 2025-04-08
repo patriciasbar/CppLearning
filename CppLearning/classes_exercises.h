@@ -126,5 +126,19 @@ enum class fruits {
 
 std::string displayFruits(fruits fruit);
 
+
+namespace Calculator
+{
+	namespace CalcInt {
+		int sumNums(int n1, int n2);
+		int divNums(int d1, int d2);
+	}
+
+}
+
+
+
+
+
 #endif;
  

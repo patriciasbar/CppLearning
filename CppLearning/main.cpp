@@ -70,6 +70,10 @@ int main()
 
         std::cout << "Fruit of the day! " << displayFruits(fruits::Orange) << '\n';
 
+        using namespace Calculator::CalcInt;
+        std::cout << "2 + 2 is equal to: " << sumNums(2, 2) << '\n';
+
+        std::cout << "44 / 2 is equal to: " << Calculator::CalcInt::divNums(44, 2) << '\n';
 
 
         break;
@@ -83,6 +87,7 @@ int main()
 
 
 }
+
 
 
 

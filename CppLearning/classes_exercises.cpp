@@ -213,4 +213,16 @@ std::string displayFruits(fruits fruit) {
 };
 
 
+int Calculator::CalcInt::sumNums(int n1, int n2)
+	{
+		return n1 + n2;
+	}
+
+int Calculator::CalcInt::divNums(int d1, int d2)
+	{
+		if (d2 > 0) {
+			return d1 / d2;
+		};
+	}
 ;
+
