@@ -1,4 +1,5 @@
 #include <iostream>
+#include<memory>
 #include "loginchecker_utils.h"
 #include "calc_utils.h"
 #include "string_exercises.h"
@@ -50,7 +51,7 @@ int main()
         break;
     case 6:
     {
-        int counter;
+        /*int counter;
         for (int i = 0; i < 10; ++i) {
             counter = myFunction();
         }
@@ -73,7 +74,32 @@ int main()
         using namespace Calculator::CalcInt;
         std::cout << "2 + 2 is equal to: " << sumNums(2, 2) << '\n';
 
-        std::cout << "44 / 2 is equal to: " << Calculator::CalcInt::divNums(44, 2) << '\n';
+        std::cout << "44 / 2 is equal to: " << Calculator::CalcInt::divNums(44, 2) << '\n';*/
+
+        /*double d1 = 2.42;
+        std::cout << "My int is " << d1 << " and my double is " << myConversion(d1) << '\n';*/
+
+        /*int age1 = 17;
+        checkAge(age1) << '\n';
+
+        std::string password = "peace";
+        std::cout << checkPassword(password);*/
+
+        double result = convertInttoDouble(37);
+        std::cout << result << '\n';
+
+        // /*Smart Pointers*/
+        // unique pointer
+        std::unique_ptr<int> p = std::make_unique < int> (98);
+        std::cout << "Value p points to is: " << *p << '\n';
+
+
+        // unique pointer to an object of a call
+        std::unique_ptr<Device> obj1 = std::make_unique<Laptop>(13);
+        obj1->displayDeviceCount();
+        obj1->displayinfo();
+
+        // shared pointers exercises
 
 
         break;

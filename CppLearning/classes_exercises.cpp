@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include<memory>
 #include "classes_exercises.h"
 
 
@@ -226,3 +227,42 @@ int Calculator::CalcInt::divNums(int d1, int d2)
 	}
 ;
 
+int myConversion(double d)
+{
+	return static_cast<int>(d);
+};
+
+
+int checkAge(int age) {
+	try {
+		if (age < 18) {
+			throw 18;
+		}
+	}
+	catch (int e) {
+		std::cout << "Too young! AgeCode: 18" << '\n';
+	}
+};
+
+
+std::string checkPassword(std::string pwd) {
+	try {
+		if (pwd.length() < 6) {
+			throw std::string{ "PWDShort" };
+		}
+		else {
+			return "Welcome!";
+		}
+	}
+		catch (const std::string& e) {
+			return "Password is less than 6 characters";
+
+		}
+
+	}
+
+
+double convertInttoDouble(int n)
+{
+	return static_cast<double>(n);
+};

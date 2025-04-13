@@ -136,7 +136,13 @@ namespace Calculator
 
 }
 
+int myConversion(double d);
 
+int checkAge(int age);
+
+std::string checkPassword(std::string pwd);
+
+double convertInttoDouble(int n);
 
 
 
