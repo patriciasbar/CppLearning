@@ -265,4 +265,62 @@ std::string checkPassword(std::string pwd) {
 double convertInttoDouble(int n)
 {
 	return static_cast<double>(n);
-};
+}
+
+
+void Happy::positiveWords() {
+	std::cout << "You got it! Keep moving! and don't forget to smile!";
+}
+
+
+void Brazil::motherTongue() {
+	std::cout << "Falamos Portugues!" << '\n';
+}
+
+void Spain::motherTongue() {
+	std::cout << "Hablamos Espanol!" << '\n';
+		
+}
+
+
+void evenOrOdd(double num)
+{
+	try 
+	{
+	
+		if (num != static_cast<int>(num))
+		{
+			throw 9999.0;
+		}
+
+		int intNum = static_cast<int>(num);
+
+		if (num < 0)
+		{
+			throw intNum;
+		}
+
+
+		if (intNum % 2 == 0)
+		{
+			std::cout << "Even" << '\n';
+		}
+		else
+		{
+			std::cout << "Odd" << '\n';
+		}
+
+	}
+	catch (int e)
+	{
+		std::cout << "Please inform a valid positive number." << '\n';
+
+	}
+	catch (double e)
+	{
+		std::cout << "Please inform a valid Integer number." << '\n';
+
+	}
+}
+
+

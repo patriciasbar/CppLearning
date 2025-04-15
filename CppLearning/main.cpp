@@ -88,18 +88,36 @@ int main()
         double result = convertInttoDouble(37);
         std::cout << result << '\n';
 
-        // /*Smart Pointers*/
-        // unique pointer
-        std::unique_ptr<int> p = std::make_unique < int> (98);
-        std::cout << "Value p points to is: " << *p << '\n';
+         /*Smart Pointers  - unique pointer*/
+        /*std::unique_ptr<int> p = std::make_unique < int> (98);
+        std::cout << "Value p points to is: " << *p << '\n';*/
 
 
-        // unique pointer to an object of a call
+        /*unique pointer to an object of a call
         std::unique_ptr<Device> obj1 = std::make_unique<Laptop>(13);
         obj1->displayDeviceCount();
-        obj1->displayinfo();
+        obj1->displayinfo();*/
 
-        // shared pointers exercises
+        /*shared pointers exercises
+        std::shared_ptr<int> int1 = std::make_shared<int> (246);
+        std::shared_ptr<int> int2 = int1;
+        std::shared_ptr<int> int3 = int1;
+        std::cout << "Pointers int1, int2 and int3 points to value: " << *int1 << " " << *int2 << " "  << *int3 << '\n';*/
+
+        /*Simple Polymorphism
+        std::unique_ptr<Smile> a1 = std::make_unique<Happy>();
+        a1->positiveWords();*/
+
+        /*Simple Polymorphism II */
+        std::unique_ptr<Country> c1 = std::make_unique<Brazil>();
+        std::unique_ptr<Country> c2 = std::make_unique<Spain>();
+        c1->motherTongue();
+        c2->motherTongue();
+
+        evenOrOdd(15);
+        evenOrOdd(-15);
+        evenOrOdd(3.5);
+        
 
 
         break;

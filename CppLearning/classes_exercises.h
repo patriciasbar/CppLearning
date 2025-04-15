@@ -144,6 +144,36 @@ std::string checkPassword(std::string pwd);
 
 double convertInttoDouble(int n);
 
+class Smile
+{
+public:
+	virtual void positiveWords() = 0; //pure virtual function
+	virtual ~Smile() {};
+};
+
+class Happy : public Smile
+{
+public:
+	void positiveWords() override;
+};
+
+
+class Country {
+public:
+	virtual void motherTongue() = 0;
+	virtual ~Country() {};
+};
+
+class Brazil : public Country {
+	void motherTongue() override;
+};
+
+class Spain : public Country {
+	void motherTongue() override;
+};
+
+void evenOrOdd(double num);
+
 
 
 #endif;
