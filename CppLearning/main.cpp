@@ -1,11 +1,13 @@
 #include <iostream>
+#include<fstream>
 #include<memory>
-#include "loginchecker_utils.h"
+#include <direct.h>  
 #include "calc_utils.h"
 #include "string_exercises.h"
 #include "initialLearning.h"
 #include "classes_exercises.h"
 #include "Person.h"
+#include "files_utils.h"
 
 int main()
 {
@@ -20,6 +22,7 @@ int main()
         << " 6 - Classes exercises \n ";        
     std::cout << "Enter an option... ";
     std::cin >> option;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     switch (option)
     {
     case 0:
@@ -43,7 +46,7 @@ int main()
         break;
     }
     case 4: 
-        loginChecker();
+        //loginChecker();
         break;
     case 5:
         std::cout << "Int division results: " << division(10, 5) << '\n';
@@ -85,12 +88,11 @@ int main()
         std::string password = "peace";
         std::cout << checkPassword(password);*/
 
-        double result = convertInttoDouble(37);
-        std::cout << result << '\n';
+        /*double result = convertInttoDouble(37);
+        std::cout << result << '\n';*/
 
          /*Smart Pointers  - unique pointer*/
-        /*std::unique_ptr<int> p = std::make_unique < int> (98);
-        std::cout << "Value p points to is: " << *p << '\n';*/
+        /*std::cout << "Value p points to is: " << *p << '\n'; */
 
 
         /*unique pointer to an object of a call
@@ -109,16 +111,23 @@ int main()
         a1->positiveWords();*/
 
         /*Simple Polymorphism II */
-        std::unique_ptr<Country> c1 = std::make_unique<Brazil>();
+        /*std::unique_ptr<Country> c1 = std::make_unique<Brazil>();
         std::unique_ptr<Country> c2 = std::make_unique<Spain>();
         c1->motherTongue();
         c2->motherTongue();
 
         evenOrOdd(15);
         evenOrOdd(-15);
-        evenOrOdd(3.5);
+        evenOrOdd(3.5);*/
         
-
+        // readCharFromFile();
+        /*std::cout << "Enter your name and age and press enter." << '\n';
+        std::string user_nm_age;
+        std::getline(std::cin, user_nm_age);
+        std::cout << "You typed: " << user_nm_age << '\n';
+        writeToFile(user_nm_age);*/
+        readWriteToFile();
+        readCharFromFile();
 
         break;
     }
