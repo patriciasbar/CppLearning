@@ -1,5 +1,6 @@
 #include <iostream>
 #include<fstream>
+#include <sstream>
 #include<memory>
 #include <direct.h>  
 #include "calc_utils.h"
@@ -19,7 +20,9 @@ int main()
         << " 3 - multiplication \n "
         << " 4 - loginChecker \n "
         << " 5 - division \n "
-        << " 6 - Classes exercises \n ";        
+        << " 6 - Classes exercises \n "
+        << " 7 - files \n "
+        << " 8 - strings \n ";
     std::cout << "Enter an option... ";
     std::cin >> option;
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -119,7 +122,10 @@ int main()
         evenOrOdd(15);
         evenOrOdd(-15);
         evenOrOdd(3.5);*/
-        
+        break;
+    }
+    case 7:
+    {
         // readCharFromFile();
         /*std::cout << "Enter your name and age and press enter." << '\n';
         std::string user_nm_age;
@@ -128,10 +134,18 @@ int main()
         writeToFile(user_nm_age);*/
         readWriteToFile();
         readCharFromFile();
-
         break;
     }
-
+    case 8:
+    {
+        readFromString();
+        std::string name = "Tutu";
+        int age = 100;
+        writeToString(name, age);
+        std::string numbers = "5 10 15";
+        readStrCalcSum(numbers);
+        break;
+    }
     default:
         std::cout << "No valid option selected.";
         break;
