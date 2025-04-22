@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="calc_utils.cpp" />
     <ClCompile Include="classes_exercises.cpp" />
+    <ClCompile Include="containers_utils.cpp" />
     <ClCompile Include="files_utils.cpp" />
     <ClCompile Include="initialLearning.cpp" />
     <ClCompile Include="loginChecker.cpp" />
@@ -139,6 +140,7 @@
   <ItemGroup>
     <ClInclude Include="calc_utils.h" />
     <ClInclude Include="classes_exercises.h" />
+    <ClInclude Include="containers_utils.h" />
     <ClInclude Include="files_utils.h" />
     <ClInclude Include="initialLearning.h" />
     <ClInclude Include="loginChecker_utils.h" />

@@ -9,6 +9,7 @@
 #include "classes_exercises.h"
 #include "Person.h"
 #include "files_utils.h"
+#include "containers_utils.h"
 
 int main()
 {
@@ -22,7 +23,8 @@ int main()
         << " 5 - division \n "
         << " 6 - Classes exercises \n "
         << " 7 - files \n "
-        << " 8 - strings \n ";
+        << " 8 - strings \n "
+        << " 9 - containers \n ";
     std::cout << "Enter an option... ";
     std::cin >> option;
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -144,6 +146,14 @@ int main()
         writeToString(name, age);
         std::string numbers = "5 10 15";
         readStrCalcSum(numbers);
+        break;
+    }
+    case 9:
+    {
+        std::cout << "Current vector size: " << checkVectorSize() << '\n';
+        int elem = 44;
+        addElementToVector(elem);
+        std::cout << "New vector size: " << checkVectorSize() << '\n';
         break;
     }
     default:
