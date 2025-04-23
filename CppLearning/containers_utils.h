@@ -1,10 +1,9 @@
 #ifndef CONTAINERS_UTILS_H
 #define CONTAINERS_UTILS_H
-#include <vector>
 
 int checkVectorSize();
 void addElementToVector(int el);
-void displayVectorElements();
-
+void addNameToList(std::string name, char pos);
+void printList();
 #endif
 

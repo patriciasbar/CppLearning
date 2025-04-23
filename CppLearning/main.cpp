@@ -151,9 +151,28 @@ int main()
     case 9:
     {
         std::cout << "Current vector size: " << checkVectorSize() << '\n';
-        int elem = 44;
-        addElementToVector(elem);
-        std::cout << "New vector size: " << checkVectorSize() << '\n';
+        int i = 0;
+        while (i < 5) 
+        {
+            std::cout << "Please inform 5 positive integer numbers and press enter..." << '\n';
+            int value;
+            std::cin >> value;
+            addElementToVector(value);
+            i++;
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        checkVectorSize();
+        int i2 = 0;
+        while (i2 < 3)
+        {
+            std::cout << "Enter a name and press enter..." << '\n';
+            std::string name;
+            std::getline(std::cin, name);
+            addNameToList(name, 'E');
+            i2++;
+        }
+        printList();
+
         break;
     }
     default:
