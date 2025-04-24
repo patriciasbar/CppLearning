@@ -172,16 +172,31 @@ int main()
             i2++;
         }
         printList();
-
+        printTodoList();
+        displayQueue();
+        std::cout << '\n';
+        std::string usr = "Lucas";
+        addToQueue(usr, 'F');
+        std::string usr2 = "Zizi";
+        addToQueue(usr2, 'B');
+        removeFromQueue('F');
+        displayQueue();
+        firstFiveDaysOfWeek();
+        for (int i = 0; i < 9; ++i)
+        {
+            std::cout << "Enter a number between 0 - 100 and press enter: .." ;
+            int n;
+            std::cin >> n;
+            addToListNumbers(n);
+        }       
+        displayListNumbers();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         break;
     }
     default:
         std::cout << "No valid option selected.";
         break;
     }
-
-
-
 }
 
 
