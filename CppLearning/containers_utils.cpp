@@ -7,6 +7,8 @@
 #include<deque>
 #include<array>
 #include<set>
+#include<map>
+#include<utility>
 
 #include "containers_utils.h"
 
@@ -16,6 +18,8 @@ static std::forward_list<std::string> todo_tasks = { "Read topic", "Review topic
 static std::deque<std::string> queue = { "Mark", "James", "Peter" };
 static std::array<std::string, 7> daysOfWeek = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"};
 static std::set<int> lst_numbers;
+static std::map<std::string, int> map_user;
+static std::pair<std::string, int> pair_user_age;
 
 
 int checkVectorSize()
@@ -119,3 +123,35 @@ void displayListNumbers()
 		std::cout << num << " ";
 	}
 }
+
+void addUserDetails(std::string name, int age)
+{
+	map_user[name] = { age };
+	std::cout << "User name and age added!" << '\n';
+}
+
+void displayDetails()
+{
+	for (auto el : map_user)
+	{
+		std::cout <<  el.first << ", " << el.second << '\n';
+	}
+}
+
+void findUserDetails(std::string user)
+{
+	auto it = map_user.find(user);
+	if (it != map_user.end())
+	{
+		std::cout << "User: " << it->first << " age: " << it->second << '\n';
+	}
+
+}
+
+void addUserPairDetails(std::string name, int age)
+{
+	pair_user_age = std::make_pair(name, age);
+	map_user[pair_user_age.first] = pair_user_age.second;
+	std::cout << "User name and age added!" << '\n';
+}
+

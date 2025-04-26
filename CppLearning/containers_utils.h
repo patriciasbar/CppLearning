@@ -12,8 +12,10 @@ void displayQueue();
 void firstFiveDaysOfWeek();
 void addToListNumbers(int n);
 void displayListNumbers();
-
-
+void addUserDetails(std::string name, int age);
+void displayDetails();
+void findUserDetails(std::string user);
+void addUserPairDetails(std::string name, int age);
 
 
 #endif

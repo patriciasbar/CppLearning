@@ -150,7 +150,7 @@ int main()
     }
     case 9:
     {
-        std::cout << "Current vector size: " << checkVectorSize() << '\n';
+       /* std::cout << "Current vector size: " << checkVectorSize() << '\n';
         int i = 0;
         while (i < 5) 
         {
@@ -190,7 +190,37 @@ int main()
             addToListNumbers(n);
         }       
         displayListNumbers();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');*/
+
+        for (int i = 1; i <= 3; ++i)
+        {
+            std::cout << "Enter user name.." ;
+            std::string nm;
+            std::getline(std::cin, nm);
+            std::cout << "Enter user age.." ;
+            int age;
+            std::cin >> age;
+            addUserDetails(nm, age);
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        displayDetails();
+        std::cout << "Enter Username to find: ";
+        std::string user;
+        std::getline(std::cin, user);
+        findUserDetails(user);
+
+        for (int i = 1; i <= 3; ++i)
+        {
+            std::cout << "Enter user name..";
+            std::string nm;
+            std::getline(std::cin, nm);
+            std::cout << "Enter user age..";
+            int age;
+            std::cin >> age;
+            addUserPairDetails(nm, age);
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        displayDetails();
         break;
     }
     default:
