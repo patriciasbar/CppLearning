@@ -3,6 +3,13 @@
 
 int checkVectorSize();
 void addElementToVector(int el);
+void displayVectorElements();
+void addStrToVector(std::string val_str);
+void displayStrVectors();
+void eraseStrVectorElement();
+void findStrVector(std::string val);
+void addCityNames(std::string city);
+void displayCities();
 void addNameToList(std::string name, char pos);
 void printList();
 void printTodoList();
@@ -16,7 +23,8 @@ void addUserDetails(std::string name, int age);
 void displayDetails();
 void findUserDetails(std::string user);
 void addUserPairDetails(std::string name, int age);
-
+void sortNumbersAsc();
+void sortNumbersDesc();
 
 #endif
 

@@ -150,7 +150,7 @@ int main()
     }
     case 9:
     {
-       /* std::cout << "Current vector size: " << checkVectorSize() << '\n';
+        /*std::cout << "Current vector size: " << checkVectorSize() << '\n';
         int i = 0;
         while (i < 5) 
         {
@@ -162,6 +162,8 @@ int main()
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
         checkVectorSize();
+        displayVectorElements();
+        
         int i2 = 0;
         while (i2 < 3)
         {
@@ -190,7 +192,7 @@ int main()
             addToListNumbers(n);
         }       
         displayListNumbers();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');*/
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         for (int i = 1; i <= 3; ++i)
         {
@@ -221,6 +223,25 @@ int main()
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         }
         displayDetails();
+        
+        for (auto i = 1; i < 6; ++i)
+        {   
+            std::cout << "String: " << " ";
+            std::string mystr;
+            std::getline(std::cin, mystr);
+            addStrToVector(mystr);
+        }
+        displayStrVectors();
+        eraseStrVectorElement();
+        displayCities();
+        std::cout << "String to find: " << " ";
+        std::string findstr;
+        std::getline(std::cin, findstr);
+        findStrVector(findstr);
+        std::cout << "Unsorted: { 45, 67, 90, -10, -1, 87 }" << '\n';
+        sortNumbersAsc();
+        std::cout << '\n';
+        sortNumbersDesc();*/
         break;
     }
     default:

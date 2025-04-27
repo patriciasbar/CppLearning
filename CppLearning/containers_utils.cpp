@@ -9,6 +9,8 @@
 #include<set>
 #include<map>
 #include<utility>
+#include<algorithm>
+#include<functional>
 
 #include "containers_utils.h"
 
@@ -20,6 +22,9 @@ static std::array<std::string, 7> daysOfWeek = { "Sunday", "Monday", "Tuesday", 
 static std::set<int> lst_numbers;
 static std::map<std::string, int> map_user;
 static std::pair<std::string, int> pair_user_age;
+static std::vector<std::string> vector_strings;
+static std::set<std::string> lst_unique_cities;
+static std::vector<int> lst = { 45, 67, 90, -10, -1, 87 };
 
 
 int checkVectorSize()
@@ -37,6 +42,15 @@ void addElementToVector(int el)
 	else
 	{
 		std::cout << "Please enter a valid positive number." << '\n';
+	}
+}
+
+void displayVectorElements()
+{
+	std::cout << "Vector values: ";
+	for (auto el : v)
+	{
+		std::cout << el << " ";
 	}
 }
 
@@ -105,7 +119,7 @@ void displayQueue()
 
 void firstFiveDaysOfWeek()
 {
-	for (auto el : daysOfWeek)
+	for (const auto& el : daysOfWeek)
 	{
 		std::cout << el << '\n';
 	}
@@ -154,4 +168,78 @@ void addUserPairDetails(std::string name, int age)
 	map_user[pair_user_age.first] = pair_user_age.second;
 	std::cout << "User name and age added!" << '\n';
 }
+
+
+//vector_strings
+void addStrToVector(std::string val_str)
+{
+	vector_strings.push_back(val_str);
+	std::cout << "Added to the vector! " << '\n';
+}
+	
+void displayStrVectors()
+{
+	for (const auto& el : vector_strings)
+	{
+		std::cout << el << '\n';
+	}
+}
+
+void eraseStrVectorElement()
+{
+	auto it = vector_strings.begin();  // first element pos
+	vector_strings.erase(it);
+	std::cout << "First element in vector deleted!" << '\n';
+}
+
+
+void findStrVector(std::string val)
+{
+	auto it = std::find(vector_strings.begin(), vector_strings.end(), val);
+	if (it != vector_strings.end())
+	{
+		std::cout << "There is a match: " << *it << '\n';
+	}
+	else 
+	{
+		std::cout << "No match found!" << '\n';
+	}
+}
+
+//list of unique cities
+void addCityNames(std::string city)
+{
+	lst_unique_cities.insert(city);
+	std::cout << "City added!" << '\n';
+}
+
+void displayCities()
+{
+	for (auto i = lst_unique_cities.begin(); i != lst_unique_cities.end(); i++)
+	{
+		std::cout << *i << " ";
+	}
+}
+
+void sortNumbersAsc()
+{
+	std::sort(lst.begin(), lst.end());
+	std::cout << "Sorted list in Ascending order: ";
+	for (auto el : lst)
+	{
+		std::cout << el << " ";
+	}
+}
+
+
+void sortNumbersDesc()
+{
+	std::sort(lst.begin(), lst.end(), std::greater<int>());
+	std::cout << "Sorted list in Descending order: ";
+	for (auto el : lst)
+	{
+		std::cout << el << " ";
+	}
+}
+
 
