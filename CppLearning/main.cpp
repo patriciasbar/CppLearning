@@ -20,11 +20,12 @@ int main()
         << " 2 - customMessage \n "
         << " 3 - multiplication \n "
         << " 4 - loginChecker \n "
-        << " 5 - division \n "
-        << " 6 - Classes exercises \n "
-        << " 7 - files \n "
-        << " 8 - strings \n "
-        << " 9 - containers \n ";
+        << " 5 - Division \n "
+        << " 6 - Classes \n "
+        << " 7 - Files \n "
+        << " 8 - Strings \n "
+        << " 9 - Containers \n "
+        << "10 - Lambda Functions \n";
     std::cout << "Enter an option... ";
     std::cin >> option;
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -150,7 +151,7 @@ int main()
     }
     case 9:
     {
-        /*std::cout << "Current vector size: " << checkVectorSize() << '\n';
+        std::cout << "Current vector size: " << checkVectorSize() << '\n';
         int i = 0;
         while (i < 5) 
         {
@@ -241,7 +242,25 @@ int main()
         std::cout << "Unsorted: { 45, 67, 90, -10, -1, 87 }" << '\n';
         sortNumbersAsc();
         std::cout << '\n';
-        sortNumbersDesc();*/
+        sortNumbersDesc();        
+        copyVectorElements();
+        minElement();
+        maxElement();
+        break;
+    }
+    case 10 :
+    {
+        auto myMessage = []() {std::cout << "Love is the best answer to everything! Amen!" << '\n'; };
+        myMessage();
+
+        auto result = [](int n1, int n2  ) {return n1 + n2; };
+        std::cout << "Result is " << result(3, 7) << '\n';
+
+        auto isEvenOrOdd = [](int n) {if (n % 2 == 0) { std::cout << n << " is Even!" << '\n'; } else { std::cout << n << " is Odd!" << '\n'; } };
+        for (int i = 1; i < 15; i++)
+        {
+            isEvenOrOdd(i);
+        }
         break;
     }
     default:

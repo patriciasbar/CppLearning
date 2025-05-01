@@ -15,16 +15,18 @@
 #include "containers_utils.h"
 
 static std::vector<int> v;
+static std::vector<int> lst = { 45, 67, 90, -10, -1, 87 };
+static std::vector<int> v_from = { 0, 2, 4, 6, 8, 10, 12 };
+static std::vector<int> v_to(3);
+static std::vector<std::string> vector_strings;
 static std::list<std::string> lst_names;
 static std::forward_list<std::string> todo_tasks = { "Read topic", "Review topic", "Practice topic" };
 static std::deque<std::string> queue = { "Mark", "James", "Peter" };
 static std::array<std::string, 7> daysOfWeek = { "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"};
-static std::set<int> lst_numbers;
 static std::map<std::string, int> map_user;
 static std::pair<std::string, int> pair_user_age;
-static std::vector<std::string> vector_strings;
+static std::set<int> lst_numbers;
 static std::set<std::string> lst_unique_cities;
-static std::vector<int> lst = { 45, 67, 90, -10, -1, 87 };
 
 
 int checkVectorSize()
@@ -37,7 +39,7 @@ void addElementToVector(int el)
 	if(el > 0)
 	{
 		v.push_back(el);
-		std::cout << "New element " << el << " added to vector v ." << '\n';
+		std::cout << "New element " << el << " added to vector ." << '\n';
 	}
 	else
 	{
@@ -53,6 +55,30 @@ void displayVectorElements()
 		std::cout << el << " ";
 	}
 }
+
+
+void copyVectorElements()
+{
+	std::copy(v_from.begin(), v_from.begin()+3, v_to.begin());
+	for (auto el : v_to)
+	{
+		std::cout << el << " ";
+	}
+}
+
+void maxElement()
+{
+	auto max = std::max_element(v_from.begin(), v_from.end());
+	std::cout << "Max element of vector is: " << *max << '\n';
+
+}
+
+void minElement()
+{
+	auto min = std::min_element(v_from.begin(), v_from.end());
+	std::cout << "Min element of vector is: " << *min << '\n';
+}
+
 
 void addNameToList(std::string name, char pos)
 {
@@ -206,6 +232,7 @@ void findStrVector(std::string val)
 	}
 }
 
+
 //list of unique cities
 void addCityNames(std::string city)
 {
@@ -241,5 +268,3 @@ void sortNumbersDesc()
 		std::cout << el << " ";
 	}
 }
-
-

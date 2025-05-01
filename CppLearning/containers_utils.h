@@ -8,6 +8,9 @@ void addStrToVector(std::string val_str);
 void displayStrVectors();
 void eraseStrVectorElement();
 void findStrVector(std::string val);
+void copyVectorElements();
+void maxElement();
+void minElement();
 void addCityNames(std::string city);
 void displayCities();
 void addNameToList(std::string name, char pos);
@@ -25,6 +28,7 @@ void findUserDetails(std::string user);
 void addUserPairDetails(std::string name, int age);
 void sortNumbersAsc();
 void sortNumbersDesc();
+
 
 #endif
 
