@@ -29,6 +29,12 @@ void addUserPairDetails(std::string name, int age);
 void sortNumbersAsc();
 void sortNumbersDesc();
 
+void addNumtoVector();
+void displayVectorElems();
+void eraseVectorElems();
+void findVectorElem(int n);
+void addElemsToSet(int el);
+void displaySetElements();
 
 #endif
 

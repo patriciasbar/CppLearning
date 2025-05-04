@@ -151,101 +151,115 @@ int main()
     }
     case 9:
     {
-        std::cout << "Current vector size: " << checkVectorSize() << '\n';
-        int i = 0;
-        while (i < 5) 
+        //std::cout << "Current vector size: " << checkVectorSize() << '\n';
+        //int i = 0;
+        //while (i < 5) 
+        //{
+        //    std::cout << "Please inform 5 positive integer numbers and press enter..." << '\n';
+        //    int value;
+        //    std::cin >> value;
+        //    addElementToVector(value);
+        //    i++;
+        //    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        //}
+        //checkVectorSize();
+        //displayVectorElements();
+        //
+        //int i2 = 0;
+        //while (i2 < 3)
+        //{
+        //    std::cout << "Enter a name and press enter..." << '\n';
+        //    std::string name;
+        //    std::getline(std::cin, name);
+        //    addNameToList(name, 'E');
+        //    i2++;
+        //}
+        //printList();
+        //printTodoList();
+        //displayQueue();
+        //std::cout << '\n';
+        //std::string usr = "Lucas";
+        //addToQueue(usr, 'F');
+        //std::string usr2 = "Zizi";
+        //addToQueue(usr2, 'B');
+        //removeFromQueue('F');
+        //displayQueue();
+        //firstFiveDaysOfWeek();
+        //for (int i = 0; i < 9; ++i)
+        //{
+        //    std::cout << "Enter a number between 0 - 100 and press enter: .." ;
+        //    int n;
+        //    std::cin >> n;
+        //    addToListNumbers(n);
+        //}       
+        //displayListNumbers();
+        //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        //for (int i = 1; i <= 3; ++i)
+        //{
+        //    std::cout << "Enter user name.." ;
+        //    std::string nm;
+        //    std::getline(std::cin, nm);
+        //    std::cout << "Enter user age.." ;
+        //    int age;
+        //    std::cin >> age;
+        //    addUserDetails(nm, age);
+        //    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        //}
+        //displayDetails();
+        //std::cout << "Enter Username to find: ";
+        //std::string user;
+        //std::getline(std::cin, user);
+        //findUserDetails(user);
+
+        //for (int i = 1; i <= 3; ++i)
+        //{
+        //    std::cout << "Enter user name..";
+        //    std::string nm;
+        //    std::getline(std::cin, nm);
+        //    std::cout << "Enter user age..";
+        //    int age;
+        //    std::cin >> age;
+        //    addUserPairDetails(nm, age);
+        //    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        //}
+        //displayDetails();
+        //
+        //for (auto i = 1; i < 6; ++i)
+        //{   
+        //    std::cout << "String: " << " ";
+        //    std::string mystr;
+        //    std::getline(std::cin, mystr);
+        //    addStrToVector(mystr);
+        //}
+        //displayStrVectors();
+        //eraseStrVectorElement();
+        //displayCities();
+        //std::cout << "String to find: " << " ";
+        //std::string findstr;
+        //std::getline(std::cin, findstr);
+        //findStrVector(findstr);
+        //std::cout << "Unsorted: { 45, 67, 90, -10, -1, 87 }" << '\n';
+        //sortNumbersAsc();
+        //std::cout << '\n';
+        //sortNumbersDesc();        
+        //copyVectorElements();
+        //minElement();
+        //maxElement();
+        //addNumtoVector();
+        //displayVectorElems();
+        //eraseVectorElems();
+        //displayVectorElems();
+
+        for (int i = 0; i < 10; ++i)
         {
-            std::cout << "Please inform 5 positive integer numbers and press enter..." << '\n';
-            int value;
-            std::cin >> value;
-            addElementToVector(value);
-            i++;
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        }
-        checkVectorSize();
-        displayVectorElements();
-        
-        int i2 = 0;
-        while (i2 < 3)
-        {
-            std::cout << "Enter a name and press enter..." << '\n';
-            std::string name;
-            std::getline(std::cin, name);
-            addNameToList(name, 'E');
-            i2++;
-        }
-        printList();
-        printTodoList();
-        displayQueue();
-        std::cout << '\n';
-        std::string usr = "Lucas";
-        addToQueue(usr, 'F');
-        std::string usr2 = "Zizi";
-        addToQueue(usr2, 'B');
-        removeFromQueue('F');
-        displayQueue();
-        firstFiveDaysOfWeek();
-        for (int i = 0; i < 9; ++i)
-        {
-            std::cout << "Enter a number between 0 - 100 and press enter: .." ;
+            std::cout << "Inform a valid int number... " << " ";
             int n;
             std::cin >> n;
-            addToListNumbers(n);
-        }       
-        displayListNumbers();
+            addElemsToSet(n);
+        }
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-        for (int i = 1; i <= 3; ++i)
-        {
-            std::cout << "Enter user name.." ;
-            std::string nm;
-            std::getline(std::cin, nm);
-            std::cout << "Enter user age.." ;
-            int age;
-            std::cin >> age;
-            addUserDetails(nm, age);
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        }
-        displayDetails();
-        std::cout << "Enter Username to find: ";
-        std::string user;
-        std::getline(std::cin, user);
-        findUserDetails(user);
-
-        for (int i = 1; i <= 3; ++i)
-        {
-            std::cout << "Enter user name..";
-            std::string nm;
-            std::getline(std::cin, nm);
-            std::cout << "Enter user age..";
-            int age;
-            std::cin >> age;
-            addUserPairDetails(nm, age);
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        }
-        displayDetails();
-        
-        for (auto i = 1; i < 6; ++i)
-        {   
-            std::cout << "String: " << " ";
-            std::string mystr;
-            std::getline(std::cin, mystr);
-            addStrToVector(mystr);
-        }
-        displayStrVectors();
-        eraseStrVectorElement();
-        displayCities();
-        std::cout << "String to find: " << " ";
-        std::string findstr;
-        std::getline(std::cin, findstr);
-        findStrVector(findstr);
-        std::cout << "Unsorted: { 45, 67, 90, -10, -1, 87 }" << '\n';
-        sortNumbersAsc();
-        std::cout << '\n';
-        sortNumbersDesc();        
-        copyVectorElements();
-        minElement();
-        maxElement();
+        displaySetElements();
         break;
     }
     case 10 :

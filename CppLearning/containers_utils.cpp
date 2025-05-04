@@ -27,7 +27,7 @@ static std::map<std::string, int> map_user;
 static std::pair<std::string, int> pair_user_age;
 static std::set<int> lst_numbers;
 static std::set<std::string> lst_unique_cities;
-
+static std::vector<int> v_nums;
 
 int checkVectorSize()
 {
@@ -267,4 +267,61 @@ void sortNumbersDesc()
 	{
 		std::cout << el << " ";
 	}
+}
+
+
+void addNumtoVector()
+{
+	for (int n = 1; n < 11; ++n)
+	{
+		v_nums.push_back(n);
+	}
+	std::cout << "Elements added to the vector!" << '\n';
+}
+
+
+void displayVectorElems()
+{
+	for (auto el : v_nums)
+	{
+		std::cout << el << " ";
+	}
+	std::cout << '\n';
+}
+
+
+void eraseVectorElems()
+{
+	v_nums.erase(v_nums.begin(), v_nums.begin()+3);
+	std::cout << "Elements deleted!" << '\n';
+}
+
+
+void findVectorElem(int n)
+{
+	auto it = std::find(std::begin(v_nums), std::end(v_nums), n);
+	if (it != std::end(v_nums))
+	{
+		std::cout << "Item " << *it << " found!" << '\n';
+	}
+	else
+	{
+		std::cout << "Match not found!" << '\n';
+	}
+}
+
+
+void addElemsToSet(int el)
+{
+	lst_numbers.insert(el);
+	std::cout << "Element is added!" << '\n';
+}
+
+void displaySetElements()
+{
+	for (auto el : lst_numbers)
+	{
+		std::cout << el << " ";
+	}
+	std::cout << '\n';
 }
