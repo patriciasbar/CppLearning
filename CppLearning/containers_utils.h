@@ -35,6 +35,8 @@ void eraseVectorElems();
 void findVectorElem(int n);
 void addElemsToSet(int el);
 void displaySetElements();
+void eraseSetElems(int el);
+void setDetails();
 
 #endif
 

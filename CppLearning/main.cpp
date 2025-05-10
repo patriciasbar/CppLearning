@@ -251,7 +251,7 @@ int main()
         //eraseVectorElems();
         //displayVectorElems();
 
-        for (int i = 0; i < 10; ++i)
+        for (int i = 0; i < 9; ++i)
         {
             std::cout << "Inform a valid int number... " << " ";
             int n;
@@ -260,6 +260,8 @@ int main()
         }
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         displaySetElements();
+        eraseSetElems(6);
+        setDetails();
         break;
     }
     case 10 :

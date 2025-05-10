@@ -317,6 +317,7 @@ void addElemsToSet(int el)
 	std::cout << "Element is added!" << '\n';
 }
 
+
 void displaySetElements()
 {
 	for (auto el : lst_numbers)
@@ -325,3 +326,36 @@ void displaySetElements()
 	}
 	std::cout << '\n';
 }
+
+
+void eraseSetElems(int el)
+{
+	auto it = lst_numbers.find(el);
+	if (it != lst_numbers.end())
+	{
+		lst_numbers.erase(it);
+		std::cout << "Element erased!" << '\n';
+	}
+	else
+	{
+		std::cout << "Element does not exist!" << '\n';
+	}
+}
+
+
+void setDetails()
+{
+	auto size = lst_numbers.size();
+	if (size > 0)
+	{
+		std::cout << "Size: " << lst_numbers.size() << '\n';
+		lst_numbers.clear();
+		std::cout << "Set cleared!" << '\n';
+		std::cout << "Size: " << lst_numbers.size() << '\n';
+	}
+	else
+	{
+		std::cout << "Set is empty!" << '\n';
+	}
+}
+
