@@ -2,6 +2,9 @@
 #include<fstream>
 #include <sstream>
 #include<memory>
+#include<vector>
+#include<algorithm>
+#include<functional>
 #include <direct.h>  
 #include "calc_utils.h"
 #include "string_exercises.h"
@@ -11,10 +14,12 @@
 #include "files_utils.h"
 #include "containers_utils.h"
 
+
 int main()
 {
     int option;
     std::cout << "Menu: \n "
+        << "99 - Basics \n"
         << " 0 - initialLearning \n "
         << " 1 - printMessage \n "
         << " 2 - customMessage \n "
@@ -277,12 +282,55 @@ int main()
         {
             isEvenOrOdd(i);
         }
+
+        std::vector<int> v = {2, 6, 99, 0, -1, 14};
+        std::sort(std::begin(v), std::end(v), [](int x, int y) {return x > y; });
+        for (auto item : v)
+        {
+            std::cout << item << " ";
+        }
+
+        int even_counter = std::count_if(std::begin(v), std::end(v), [](int n) {return n % 2 == 0; });
+        std::cout << "\nTotal count of even numbers: " << even_counter <<'\n';
+
+        int num = 8;
+        std::cout << "Current value of num: " << num <<'\n';
+        auto replace_num = [&num]() {++num; };
+        replace_num();
+        std::cout << "New value of num: " << num;
+
+        
+
+        break;
+    }
+    case 99:
+    {
+        /*std::vector<int> my_v = { 12, 4, 6, 28, 9 };
+        int sum = 0;
+        std::for_each(my_v.begin(), my_v.end(), [&sum](int num)
+            {if (num > 10)
+        {
+            sum += num;
+        }}
+        );    
+        std::cout << "Total sum: " << sum << '\n';*/
+
+        
+        enum class Day { Monday, Tuesday, Wednesday };
+        Day today = Day::Monday;
+        if (today == Day::Monday) {
+            std::cout << "Happy Monday!" << '\n';
+        };
+
         break;
     }
     default:
         std::cout << "No valid option selected.";
         break;
     }
+    constexpr bool result2 = isEven(5); // OK, compile-time known
+    std::cout << result2 << '\n';
+
 }
 
 

@@ -38,5 +38,11 @@ void displaySetElements();
 void eraseSetElems(int el);
 void setDetails();
 
+
+constexpr bool isEven(int x) {
+	return x % 2 == 0;
+}
+
+
 #endif
 
