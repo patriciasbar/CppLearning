@@ -11,6 +11,7 @@
 #include<utility>
 #include<algorithm>
 #include<functional>
+#include<unordered_map>
 
 #include "containers_utils.h"
 
@@ -28,6 +29,7 @@ static std::pair<std::string, int> pair_user_age;
 static std::set<int> lst_numbers;
 static std::set<std::string> lst_unique_cities;
 static std::vector<int> v_nums;
+static std::unordered_map<std::string, float> products;
 
 int checkVectorSize()
 {
@@ -359,6 +361,39 @@ void setDetails()
 	}
 }
 
+void addProducts(std::string prodName, float price)
+{
+	if (!prodName.empty())
+	{
+		products[prodName] = price;
+		std::cout << "Product added!" << '\n';
+	}
+	else
+	{
+		std::cout << "Please inform a product name!";
+	}
+}
 
 
+void displayProducts()
+{
+	if (products.size() > 0)
+	{
+		for (const auto& pair : products)
+		{
+			std::cout << pair.first << " => " << pair.second << '\n';
+		}
+	}
+}
 
+
+void updatePrice(std::string prod, float new_price)
+{
+	auto found_it = products.find(prod);
+	if (found_it != products.end())
+	{
+		products[prod] = new_price;
+		std::cout << "Price updated!" << '\n';	}
+
+
+}

@@ -324,3 +324,17 @@ void evenOrOdd(double num)
 }
 
 
+Logger::Logger()   //user defined constructor
+{
+	log();
+}
+
+void Logger::log()
+{
+	std::cout << "Logging activity...." << '\n';
+}
+;
+
+
+
+

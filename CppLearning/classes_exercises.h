@@ -175,6 +175,13 @@ class Spain : public Country {
 void evenOrOdd(double num);
 
 
+class Logger
+{
+public:
+	Logger();   //user defined constructor
+	void log();
+}
+;
 
 #endif;
  

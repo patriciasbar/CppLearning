@@ -69,67 +69,16 @@ int main()
         for (int i = 0; i < 10; ++i) {
             counter = myFunction();
         }
-        std::cout << "Function was called: " << counter << '\n';
+        std::cout << "Function was called: " << counter << '\n';*/
 
-        TypeClass<int> mytype(24);
-        std::cout << "My val is: " << mytype.getVal() << '\n';
-        mytype.setVal(12);
-        std::cout << "My val is: " << mytype.getVal() << '\n';
+        std::shared_ptr<Logger> log1 = std::make_shared<Logger>();
+        std::shared_ptr<Logger> log2 = log1;
+        std::shared_ptr<Logger> log3 = log1;
+        std::shared_ptr<Logger> log4 = log1;
 
-        TypeClass<std::string> mytype2("Peter");
-        std::cout << "My val is: " << mytype2.getVal() << '\n';
-        mytype2.setVal("Moses");
-        std::cout << "My val is: " << mytype2.getVal() << '\n';
-
-        std::cout << "Day of the week: " << checkDayOfWeek(daysOfWeek::Friday) << '\n';
-
-        std::cout << "Fruit of the day! " << displayFruits(fruits::Orange) << '\n';
-
-        using namespace Calculator::CalcInt;
-        std::cout << "2 + 2 is equal to: " << sumNums(2, 2) << '\n';
-
-        std::cout << "44 / 2 is equal to: " << Calculator::CalcInt::divNums(44, 2) << '\n';*/
-
-        /*double d1 = 2.42;
-        std::cout << "My int is " << d1 << " and my double is " << myConversion(d1) << '\n';*/
-
-        /*int age1 = 17;
-        checkAge(age1) << '\n';
-
-        std::string password = "peace";
-        std::cout << checkPassword(password);*/
-
-        /*double result = convertInttoDouble(37);
-        std::cout << result << '\n';*/
-
-         /*Smart Pointers  - unique pointer*/
-        /*std::cout << "Value p points to is: " << *p << '\n'; */
+        std::cout << log1.use_count() << '\n';
 
 
-        /*unique pointer to an object of a call
-        std::unique_ptr<Device> obj1 = std::make_unique<Laptop>(13);
-        obj1->displayDeviceCount();
-        obj1->displayinfo();*/
-
-        /*shared pointers exercises
-        std::shared_ptr<int> int1 = std::make_shared<int> (246);
-        std::shared_ptr<int> int2 = int1;
-        std::shared_ptr<int> int3 = int1;
-        std::cout << "Pointers int1, int2 and int3 points to value: " << *int1 << " " << *int2 << " "  << *int3 << '\n';*/
-
-        /*Simple Polymorphism
-        std::unique_ptr<Smile> a1 = std::make_unique<Happy>();
-        a1->positiveWords();*/
-
-        /*Simple Polymorphism II */
-        /*std::unique_ptr<Country> c1 = std::make_unique<Brazil>();
-        std::unique_ptr<Country> c2 = std::make_unique<Spain>();
-        c1->motherTongue();
-        c2->motherTongue();
-
-        evenOrOdd(15);
-        evenOrOdd(-15);
-        evenOrOdd(3.5);*/
         break;
     }
     case 7:
@@ -156,117 +105,25 @@ int main()
     }
     case 9:
     {
-        //std::cout << "Current vector size: " << checkVectorSize() << '\n';
-        //int i = 0;
-        //while (i < 5) 
-        //{
-        //    std::cout << "Please inform 5 positive integer numbers and press enter..." << '\n';
-        //    int value;
-        //    std::cin >> value;
-        //    addElementToVector(value);
-        //    i++;
-        //    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        //}
-        //checkVectorSize();
-        //displayVectorElements();
-        //
-        //int i2 = 0;
-        //while (i2 < 3)
-        //{
-        //    std::cout << "Enter a name and press enter..." << '\n';
-        //    std::string name;
-        //    std::getline(std::cin, name);
-        //    addNameToList(name, 'E');
-        //    i2++;
-        //}
-        //printList();
-        //printTodoList();
-        //displayQueue();
-        //std::cout << '\n';
-        //std::string usr = "Lucas";
-        //addToQueue(usr, 'F');
-        //std::string usr2 = "Zizi";
-        //addToQueue(usr2, 'B');
-        //removeFromQueue('F');
-        //displayQueue();
-        //firstFiveDaysOfWeek();
-        //for (int i = 0; i < 9; ++i)
-        //{
-        //    std::cout << "Enter a number between 0 - 100 and press enter: .." ;
-        //    int n;
-        //    std::cin >> n;
-        //    addToListNumbers(n);
-        //}       
-        //displayListNumbers();
-        //std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-        //for (int i = 1; i <= 3; ++i)
-        //{
-        //    std::cout << "Enter user name.." ;
-        //    std::string nm;
-        //    std::getline(std::cin, nm);
-        //    std::cout << "Enter user age.." ;
-        //    int age;
-        //    std::cin >> age;
-        //    addUserDetails(nm, age);
-        //    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        //}
-        //displayDetails();
-        //std::cout << "Enter Username to find: ";
-        //std::string user;
-        //std::getline(std::cin, user);
-        //findUserDetails(user);
-
-        //for (int i = 1; i <= 3; ++i)
-        //{
-        //    std::cout << "Enter user name..";
-        //    std::string nm;
-        //    std::getline(std::cin, nm);
-        //    std::cout << "Enter user age..";
-        //    int age;
-        //    std::cin >> age;
-        //    addUserPairDetails(nm, age);
-        //    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        //}
-        //displayDetails();
-        //
-        //for (auto i = 1; i < 6; ++i)
-        //{   
-        //    std::cout << "String: " << " ";
-        //    std::string mystr;
-        //    std::getline(std::cin, mystr);
-        //    addStrToVector(mystr);
-        //}
-        //displayStrVectors();
-        //eraseStrVectorElement();
-        //displayCities();
-        //std::cout << "String to find: " << " ";
-        //std::string findstr;
-        //std::getline(std::cin, findstr);
-        //findStrVector(findstr);
-        //std::cout << "Unsorted: { 45, 67, 90, -10, -1, 87 }" << '\n';
-        //sortNumbersAsc();
-        //std::cout << '\n';
-        //sortNumbersDesc();        
-        //copyVectorElements();
-        //minElement();
-        //maxElement();
-        //addNumtoVector();
-        //displayVectorElems();
-        //eraseVectorElems();
-        //displayVectorElems();
-
-        for (int i = 0; i < 9; ++i)
+        std::string prodName;
+        float price;
+        for (int i = 0; i < 3; ++i)
         {
-            std::cout << "Inform a valid int number... " << " ";
-            int n;
-            std::cin >> n;
-            addElemsToSet(n);
+            std::cout << "Enter the product name: ";
+            std::getline(std::cin,prodName);
+            std::cout << "Enter the price: ";
+            std::cin >> price;
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');        
+            addProducts(prodName, price);
         }
+        displayProducts();
+        std::cout << "Type in the product name to update its price: ";
+        std::getline(std::cin,prodName);
+        std::cout << "new Price: ";
+        std::cin >> price;
         std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        displaySetElements();
-        eraseSetElems(6);
-        setDetails();
+        updatePrice(prodName, price);
+        displayProducts();
         break;
     }
     case 10 :
@@ -316,11 +173,14 @@ int main()
         std::cout << "Total sum: " << sum << '\n';*/
 
         
-        enum class Day { Monday, Tuesday, Wednesday };
+        /*enum class Day { Monday, Tuesday, Wednesday };
         Day today = Day::Monday;
         if (today == Day::Monday) {
             std::cout << "Happy Monday!" << '\n';
-        };
+        };*/
+
+
+
 
         break;
     }
@@ -328,8 +188,8 @@ int main()
         std::cout << "No valid option selected.";
         break;
     }
-    constexpr bool result2 = isEven(5); // OK, compile-time known
-    std::cout << result2 << '\n';
+    //constexpr bool result2 = isEven(5); // OK, compile-time known
+    //std::cout << result2 << '\n';
 
 }
 

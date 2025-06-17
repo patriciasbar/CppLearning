@@ -38,6 +38,10 @@ void displaySetElements();
 void eraseSetElems(int el);
 void setDetails();
 
+void addProducts(std::string prodName, float price);
+void displayProducts();
+void updatePrice(std::string prod, float new_price);
+
 
 constexpr bool isEven(int x) {
 	return x % 2 == 0;
