@@ -41,6 +41,7 @@ void setDetails();
 void addProducts(std::string prodName, float price);
 void displayProducts();
 void updatePrice(std::string prod, float new_price);
+void displayCountryDetails();
 
 
 constexpr bool isEven(int x) {

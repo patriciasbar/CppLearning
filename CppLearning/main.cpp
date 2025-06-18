@@ -105,25 +105,7 @@ int main()
     }
     case 9:
     {
-        std::string prodName;
-        float price;
-        for (int i = 0; i < 3; ++i)
-        {
-            std::cout << "Enter the product name: ";
-            std::getline(std::cin,prodName);
-            std::cout << "Enter the price: ";
-            std::cin >> price;
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');        
-            addProducts(prodName, price);
-        }
-        displayProducts();
-        std::cout << "Type in the product name to update its price: ";
-        std::getline(std::cin,prodName);
-        std::cout << "new Price: ";
-        std::cin >> price;
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        updatePrice(prodName, price);
-        displayProducts();
+        displayCountryDetails();
         break;
     }
     case 10 :
@@ -191,6 +173,9 @@ int main()
     //constexpr bool result2 = isEven(5); // OK, compile-time known
     //std::cout << result2 << '\n';
 
+    /*constexpr int maxUsers = 1001;
+    static_assert(maxUsers <= 1000, "Max users has reached its max value!");*/
+    
 }
 
 

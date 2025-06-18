@@ -12,6 +12,7 @@
 #include<algorithm>
 #include<functional>
 #include<unordered_map>
+#include<tuple>
 
 #include "containers_utils.h"
 
@@ -30,6 +31,7 @@ static std::set<int> lst_numbers;
 static std::set<std::string> lst_unique_cities;
 static std::vector<int> v_nums;
 static std::unordered_map<std::string, float> products;
+const std::tuple<std::string, long, double> country = { "Brasil", 212770794, 8.51 };
 
 int checkVectorSize()
 {
@@ -396,4 +398,12 @@ void updatePrice(std::string prod, float new_price)
 		std::cout << "Price updated!" << '\n';	}
 
 
+}
+
+
+void displayCountryDetails()
+{
+	std::cout << "The population of " << std::get<0>(country) <<
+		" is estimated to be (as of 2025) " << std::get<1>(country) <<
+		" and its total area(KM2) is " << std::get<2>(country) << "!" << '\n';
 }
