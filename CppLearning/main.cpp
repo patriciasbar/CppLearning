@@ -5,6 +5,7 @@
 #include<vector>
 #include<algorithm>
 #include<functional>
+#include<thread>
 #include <direct.h>  
 #include "calc_utils.h"
 #include "string_exercises.h"
@@ -13,6 +14,7 @@
 #include "Person.h"
 #include "files_utils.h"
 #include "containers_utils.h"
+#include "threads_utils.h"
 
 
 int main()
@@ -144,26 +146,11 @@ int main()
     }
     case 99:
     {
-        /*std::vector<int> my_v = { 12, 4, 6, 28, 9 };
-        int sum = 0;
-        std::for_each(my_v.begin(), my_v.end(), [&sum](int num)
-            {if (num > 10)
-        {
-            sum += num;
-        }}
-        );    
-        std::cout << "Total sum: " << sum << '\n';*/
-
-        
-        /*enum class Day { Monday, Tuesday, Wednesday };
-        Day today = Day::Monday;
-        if (today == Day::Monday) {
-            std::cout << "Happy Monday!" << '\n';
-        };*/
-
-
-
-
+    /*concurrency*/
+        std::thread down(downloadMessage);
+        std::thread up(uploadMessage);
+        down.join();
+        up.join();
         break;
     }
     default:

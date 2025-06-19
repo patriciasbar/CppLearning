@@ -136,6 +136,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Person.cpp" />
     <ClCompile Include="string_exercises.cpp" />
+    <ClCompile Include="threads_utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="calc_utils.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="Person.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="string_exercises.h" />
+    <ClInclude Include="threads_utils.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
