@@ -43,10 +43,13 @@ void displayProducts();
 void updatePrice(std::string prod, float new_price);
 void displayCountryDetails();
 
+void addUserMap(std::string username, int userage);
+void displayUserMap();
+
 
 constexpr bool isEven(int x) {
 	return x % 2 == 0;
-}
+};
 
 
 #endif

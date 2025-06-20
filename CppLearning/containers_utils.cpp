@@ -32,6 +32,9 @@ static std::set<std::string> lst_unique_cities;
 static std::vector<int> v_nums;
 static std::unordered_map<std::string, float> products;
 const std::tuple<std::string, long, double> country = { "Brasil", 212770794, 8.51 };
+using UserMap = std::unordered_map<std::string, int>;
+UserMap mymap;
+
 
 int checkVectorSize()
 {
@@ -406,4 +409,28 @@ void displayCountryDetails()
 	std::cout << "The population of " << std::get<0>(country) <<
 		" is estimated to be (as of 2025) " << std::get<1>(country) <<
 		" and its total area(KM2) is " << std::get<2>(country) << "!" << '\n';
+}
+
+
+
+void addUserMap(std::string username, int userage)
+{
+	if (!username.empty() && userage > -1)
+	{
+		mymap[username] = { userage };
+		std::cout << "User/age added!" << '\n';
+	}
+	else
+	{
+		std::cout << "Inform a valid username or age!" << '\n';
+	}
+};
+
+
+void displayUserMap()
+{
+	for (auto el : mymap)
+	{
+		std::cout << "User: " << el.first << " , " << "Age: " << el.second << '\n';
+	}
 }

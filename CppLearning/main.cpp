@@ -107,7 +107,9 @@ int main()
     }
     case 9:
     {
-        displayCountryDetails();
+        /*displayCountryDetails();*/
+        addUserMap("Titi", -99);
+        displayUserMap();
         break;
     }
     case 10 :
@@ -138,9 +140,7 @@ int main()
         std::cout << "Current value of num: " << num <<'\n';
         auto replace_num = [&num]() {++num; };
         replace_num();
-        std::cout << "New value of num: " << num;
-
-        
+        std::cout << "New value of num: " << num;     
 
         break;
     }
@@ -151,6 +151,8 @@ int main()
         std::thread up(uploadMessage);
         down.join();
         up.join();
+
+
         break;
     }
     default:
