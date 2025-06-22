@@ -67,20 +67,21 @@ int main()
         break;
     case 6:
     {
-        /*int counter;
-        for (int i = 0; i < 10; ++i) {
-            counter = myFunction();
-        }
-        std::cout << "Function was called: " << counter << '\n';*/
-
-        std::shared_ptr<Logger> log1 = std::make_shared<Logger>();
-        std::shared_ptr<Logger> log2 = log1;
-        std::shared_ptr<Logger> log3 = log1;
-        std::shared_ptr<Logger> log4 = log1;
-
-        std::cout << log1.use_count() << '\n';
-
-
+        Shape myshape;
+        myshape.type = "Square";  // default constructor is called
+        std::cout << myshape.type << '\n';
+        Shape myshape2 = myshape;  // copy constructor is called
+        std::cout << myshape2.type << '\n';
+        Shape myshape3;
+        myshape3.type = "Triangle";
+        std::cout << myshape3.type << '\n';
+        myshape3 = myshape2;
+        std::cout << myshape3.type << '\n';
+        Shape myshape4 = std::move(myshape3);
+        std::cout << myshape3.type << '\n';
+        std::cout << myshape4.type << '\n';
+        myshape3 = std::move(myshape2);
+        std::cout << myshape3.type << '\n';
         break;
     }
     case 7:

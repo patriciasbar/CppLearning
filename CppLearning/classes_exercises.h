@@ -183,5 +183,19 @@ public:
 }
 ;
 
+class Shape
+{
+public:
+	std::string type;
+	Shape();
+	Shape(const Shape& other); //copy constructor
+	Shape& operator=(const Shape& other); //copy assignment
+	Shape(Shape&& other); //move constructor
+	Shape& operator=(Shape&& other); //move assignment
+};
+
+
+
+
 #endif;
  

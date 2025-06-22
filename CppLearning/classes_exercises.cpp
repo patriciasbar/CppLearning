@@ -335,6 +335,37 @@ void Logger::log()
 }
 ;
 
+Shape::Shape()
+{
+	std::cout << "Default constructor called!" << '\n';
+}
+
+Shape::Shape(const Shape& other)
+{
+	type = "Circle";
+	std::cout << "Copy constructor called!" << '\n';
+}
+
+Shape& Shape::operator=(const Shape& other)
+{
+	this->type = other.type;
+	std::cout << "Copy assignment called!" << '\n';
+	return *this;
+}
+
+Shape::Shape(Shape&& other)
+{
+	type = std::move(other.type);
+	std::cout << "Move constructor called!" << '\n';
+}
+
+Shape& Shape::operator=(Shape&& other)
+{
+	type = std::move(other.type);
+	std::cout << "Move assignment called!" << '\n';
+	return *this;
+}
+
 
 
 
